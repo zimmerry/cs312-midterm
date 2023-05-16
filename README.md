@@ -6,7 +6,7 @@
 3. For Name, enter a name like "EC2 Minecraft Server"
 4. Under Application and OS Image, choose the Ubuntu AMI
 5. Select 64-bit (x86) as the architecture
-6. Select any instance type (minimum t2.micro)
+6. Select any instance type (I recommend t2.medium at a minimum)
 7. Under Key pair, select an existing Key pair (if you have one). Create a new key pair if you don't. Save the private key
 8. Under Network settings, click Edit
   - Under Security group name, enter a name like "minecraft-server"
