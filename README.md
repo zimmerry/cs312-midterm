@@ -34,6 +34,7 @@
 curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 ```
+Skip to [post-installation steps](#do-the-linux-post-installation-steps-for-docker-engine)
 #### Set up the docker repository 
   
 1. Update the `apt` package index and install packages to allow `apt` to use a repository over HTTPS:
@@ -123,7 +124,7 @@ services:
 docker compose up -d
 ```
 Congrats! Your Minecraft server is now running!
-You can connect to it from Minecraft by entering instance's public DNS into the server selection page, like this:
+You can connect to it from Minecraft by entering instance's public DNS as the Server Address  , like this:
 ```
-ec2-12-345-678-901.compute-1.amazonaws.com
+ec2-52-70-32-246.compute-1.amazonaws.com
 ```
