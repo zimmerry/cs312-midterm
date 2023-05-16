@@ -30,6 +30,7 @@
 ### Install dependencies
 1. Install and set up [Docker Engine](https://docs.docker.com/engine/install/) - follow Docker's documentation or the steps here
 2. Use the convenience script:
+
 #### Use the convenience script (recommended):
 ```bash
 curl -fsSL https://get.docker.com -o get-docker.sh
