@@ -1,4 +1,4 @@
-# cs312-midterm
+# How to set up a Minecraft Server on EC2
 
 ## Create your instance
 1. Navigate to the EC2 dashboard
@@ -30,12 +30,15 @@
 ### Install dependencies
 1. Install and set up [Docker Engine](https://docs.docker.com/engine/install/) - follow Docker's documentation or the steps here:
 2. Use the convenience script:
+#### Use the convenience script (recommended):
 ```bash
 curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 ```
 Skip to [post-installation steps](#do-the-linux-post-installation-steps-for-docker-engine)
-#### Set up the docker repository 
+
+#### Manual Setup
+##### Set up the docker repository 
   
 1. Update the `apt` package index and install packages to allow `apt` to use a repository over HTTPS:
 ```bash
@@ -55,7 +58,7 @@ echo \
   "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 ```
-#### Install Docker Engine
+##### Install Docker Engine
 1. Update the `apt` package index:
 ```bash
 sudo apt-get update
@@ -87,7 +90,7 @@ docker run hello-world
 sudo systemctl enable docker.service
 sudo systemctl enable containerd.service
 ```
-### Setup the Minecraft server with Docker
+### Setup the Minecraft server with Docker Compose
 1. Create a new folder
 ```bash
 mkdir minecraft
@@ -120,11 +123,15 @@ services:
     restart: always
 ```
 ### Start your Minecraft server
+Run this command to start it in the background
 ```bash
 docker compose up -d
 ```
+This will pull the docker images and start them.
+
 Congrats! Your Minecraft server is now running!
-You can connect to it from Minecraft by entering instance's public DNS as the Server Address  , like this:
+
+You can connect to it from the Minecraft client by entering instance's public DNS as the Server Address, like this:
 ```
 ec2-52-70-32-246.compute-1.amazonaws.com
 ```
