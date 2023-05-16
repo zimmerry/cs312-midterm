@@ -118,3 +118,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
     restart: always
 ```
+### Start your Minecraft server
+```bash
+docker compose up -d
+```
