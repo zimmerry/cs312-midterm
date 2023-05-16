@@ -123,7 +123,7 @@ services:
 docker compose up -d
 ```
 Congrats! Your Minecraft server is now running!
-You can connect to it from Minecraft with the instance's public DNS, like this:
+You can connect to it from Minecraft by entering instance's public DNS into the server selection page, like this:
 ```
 ec2-12-345-678-901.compute-1.amazonaws.com
 ```
