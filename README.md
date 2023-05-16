@@ -86,3 +86,35 @@ docker run hello-world
 sudo systemctl enable docker.service
 sudo systemctl enable containerd.service
 ```
+### Setup the Minecraft server with Docker
+1. Create a new folder
+```bash
+mkdir minecraft
+cd minecraft
+```
+2. Create a Docker Compose yaml file
+```bash
+nano compose.yml
+```
+3. Add the following to `compose.yml` - this configures the Minecraft server and [watchtower](https://containrrr.dev/watchtower/), which will automatically update the Minecraft docker image periodically:
+```yaml
+services:
+  minecraft:
+    image: itzg/minecraft-server
+    container_name: minecraft
+    environment:
+      EULA: "TRUE"
+    tty: true
+    stdin_open: true
+    volumes:
+      - ./minecraft-data:/data
+    ports:
+      - 25565:25565
+    restart: always
+  watchtower:
+    image: containrrr/watchtower
+    container_name: watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart: always
+```
