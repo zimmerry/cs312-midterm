@@ -28,7 +28,7 @@
 5. If you see an Ubuntu welcome screen, you're connected!
 
 ### Install dependencies
-1. Install and set up [Docker Engine](https://docs.docker.com/engine/install/) - follow Docker's documentation or the steps here:
+1. Install and set up [Docker Engine](https://docs.docker.com/engine/install/) - follow Docker's documentation or the steps here
 2. Use the convenience script:
 #### Use the convenience script (recommended):
 ```bash
@@ -65,7 +65,8 @@ sudo apt-get update
 ```
 2. Install Docker Engine, containerd, and Docker Compose:
 ```bash
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo apt-get install docker-ce docker-ce-cli containerd.io \
+docker-buildx-plugin docker-compose-plugin
 ```
 3. Verify that the Docker Engine installation is successful by running the `hello-world` image.
 ```bash
