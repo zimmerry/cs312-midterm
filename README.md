@@ -127,4 +127,3 @@ You can connect to it from Minecraft with the instance's public DNS, like this:
 ```
 ec2-12-345-678-901.compute-1.amazonaws.com
 ```
-```
